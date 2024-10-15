@@ -15,11 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-<<<<<<< HEAD
-            "heading": "Browse our latest Local Changes",
-=======
             "heading": "Browse our latest Local Changes #2",
->>>>>>> dca9017b909c6e3d9c3efabfa3b478023d9152c1
             "heading_size": "h0"
           }
         },
