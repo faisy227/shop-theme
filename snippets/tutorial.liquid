@@ -1,3 +1,58 @@
-{%  assign my_Variable = "Hello World" %}
+{% comment %} String {% endcomment %}
 
-{{myVariable}}
+{%- assign my_string = "This is a string"-%}
+{% comment %} print {% endcomment %}
+{{my_string}}
+
+<br>
+{% comment %} Number {% endcomment %}
+{% assign my_number = 123 %}
+{% assign my_floating_number = 123.23 %}
+
+{{my_number}}, {{my_floating_number}}
+
+{% comment %} Booleans {% endcomment %}
+
+{% assign my_boolean = true %}
+{{my_boolean}}
+
+{% comment %} null and nil {% endcomment %}
+ {% assign my_null = null %}
+ {{my_null}}
+
+ {% comment %} Conditional IF {% endcomment %}
+ {% if underfinded_variable == null %}
+    <p>The underfind varialie is equal too null</p>
+ {% endif %}
+
+ {% comment %} Arrays {% endcomment %}
+  {% comment %} display the whole array, no spaces {% endcomment %}
+{{product.tags}}
+{% comment %} display array at index {% endcomment %}
+{{product.tags[2]}}
+{% comment %} display the size of the array {% endcomment %}
+{{product.tags.size}}
+{% comment %} string can use .size {% endcomment %}
+ <p>String size:</p>
+ {{my_string.size}}
+
+ {% comment %} Loop through Array {% endcomment %}
+
+ {% for tag in product.tags %}
+   <br> {{tag}} <br>
+ {% endfor %}
+
+ {% comment %} product is a provided variable {% endcomment %}
+<br>
+The title: {{product.title}}
+
+{% comment %} different way to assign Variables(multiple lines) {% endcomment %}
+ {% comment %} capture way: {% endcomment %}
+
+ {% capture my_html %}
+    <div>
+        <p>hello {{porduct.title}}</p>
+    </div>
+ {% endcapture %}
+
+ {{my_html}}
