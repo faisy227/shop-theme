@@ -1,7 +1,9 @@
-{% paginate collection.products by 5 %}
-   {% for product in collection.products %}
-      <p>{{product.title}}</p>
-   {% endfor %}
-   {% comment %} creates the links: {% endcomment %}
-   {{paginate | default_pagination}}
-{% endpaginate %}
+{% if collection.products %}
+   {% paginate collection.products by 5 %}
+      {% for product in collection.products %}
+         <p>{{product.title}}</p>
+      {% endfor %}
+      {% comment %} creates the links: {% endcomment %}
+      {{paginate | default_pagination}}
+   {% endpaginate %}
+{% endif %}
