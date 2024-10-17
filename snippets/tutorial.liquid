@@ -1,7 +1,7 @@
-{% assign my_variabale = 11 %}
-
-{% if my_variabale > 10 %}
-   <p>Varibale is Greater than ten</p>
-{% else %}
-   <p>Variable is not greater than 10</p>
-{% endif %}
+{% paginate collection.products by 5 %}
+   {% for product in collection.products %}
+      <p>{{product.title}}</p>
+   {% endfor %}
+   {% comment %} creates the links: {% endcomment %}
+   {{paginate | default_pagination}}
+{% endpaginate %}
