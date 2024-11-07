@@ -1,9 +1,38 @@
-{% if collection.products %}
+<h2>List of all Products:</h2>
+<ul>
    {% paginate collection.products by 5 %}
-      {% for product in collection.products %}
-         <p>{{product.title}}</p>
-      {% endfor %}
-      {% comment %} creates the links: {% endcomment %}
-      {{paginate | default_pagination}}
+    {% for product in collection.products %}
+        <li>{{ product.title }}</li>
+    {% endfor %}
+    {{ paginate |  default_pagination }}
    {% endpaginate %}
-{% endif %}
+</ul>
+
+<style>
+    .prev a,
+    .next a{
+        color: blueviolet;
+        text-decoration: none;
+        font-family: cursive;
+    }
+    .page{
+       padding: 10px;
+       background: blueviolet;
+       color: white;
+    }
+    .page.current{
+        background: orchid;
+    }
+    .page a{
+        color: white;
+        text-decoration: none;
+    }
+</style>
+{% unless product.tags == blank %}
+    <h2>List of all tags</h2>
+    <ul>
+    {% for tag in product.tags %}
+        <li>{{ tag }}</li>
+    {% endfor %}
+    </ul>
+{% endunless %}
