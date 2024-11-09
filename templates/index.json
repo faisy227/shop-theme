@@ -19,6 +19,13 @@
             "heading_size": "h0"
           }
         },
+        "text_qjdg9a": {
+          "type": "text",
+          "settings": {
+            "text": "This is a text block",
+            "text_style": "body"
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -33,6 +40,7 @@
       },
       "block_order": [
         "heading",
+        "text_qjdg9a",
         "button"
       ],
       "settings": {
