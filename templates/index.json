@@ -15,8 +15,15 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Local Changes #2",
+            "heading": "My Image Banner",
             "heading_size": "h0"
+          }
+        },
+        "text_qjdg9a": {
+          "type": "text",
+          "settings": {
+            "text": "This is a text block",
+            "text_style": "body"
           }
         },
         "button": {
@@ -33,9 +40,11 @@
       },
       "block_order": [
         "heading",
+        "text_qjdg9a",
         "button"
       ],
       "settings": {
+        "image": "shopify://shop_images/theme_cover_image.jpg",
         "image_overlay_opacity": 40,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
