@@ -303,7 +303,10 @@
  {% comment %} takes a file from a .liquid and display it {% endcomment %}
     {% render 'tutorial' title "My Title" %}
     {% comment %} can access the with "" in rendered page{% endcomment %}
-    
+    {% render 'my-snippet', {
+      word: 'hello',
+      second_word: "another one"
+    } %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
