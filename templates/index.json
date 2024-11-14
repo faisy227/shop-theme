@@ -129,6 +129,18 @@
     },
     "promotion_groups_BrVmYa": {
       "type": "promotion-groups",
+      "blocks": {
+        "promotion_LdRrX6": {
+          "type": "promotion",
+          "settings": {
+            "title": "",
+            "image": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "promotion_LdRrX6"
+      ],
       "settings": {
         "title": "Promotion One!!!",
         "title_alignment": "center"
