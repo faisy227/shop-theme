@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% comment %} get the value {% endcomment %}
 <h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
 {% comment %} se {% endcomment %}
@@ -63,79 +62,4 @@
       }
     ]
   }
-=======
-{% comment %} get the value {% endcomment %}
-<h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
-{% comment %} se {% endcomment %}
-<div style="display: flex; justify-content: center; gap: 20px;">
-  {% for block in section.blocks %}
-    {% if block.type == "promotion" %}
-      <div style="display: flex;flex-direction: column; gap: 10px;">
-        <h3>{{ block.settings.title }}</h3>
-      {{ block.settings.image | image_url: width: 500, height: 500 | image_tag }}
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
-{% for block in section.blocks %}
-  {% if block.type == "promotion" %}
-    <h3>{{ block.settings.title }}</h3>
-    {{ block.settings.image | image_url: width: 500, height: 500 | image_tag }}
-  {% endif %}
-{% endfor %}
-{% schema %}
-  {
-    "name": "Promotions Group",
-    "tag": "section",
-    "class": "my-wrapper-class",
-    "settings": [
-      {
-        "type": "text",
-        "label": "Title",
-        "id": "title",
-        "default": "Welcom!e to Our Store"
-      }, {
-        "type": "select",
-        "label": "Title Alignment",
-        "id": "title_alignment",
-        "options": [
-          {
-            "value": "left",
-            "label": "Left"
-          }, {
-            "value": "center",
-            "label": "Center"
-          }, {
-            "value": "right",
-            "label": "Right"
-          }
-
-        ],
-        "default": "left"
-      }
-    ],
-    "blocks": [
-      {
-        "type": "promotion",
-        "name": "Promotion",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "title"
-          }, {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Promotions"
-      }
-    ]
-  }
->>>>>>> 0ab13cd1fb32bdfc70add855aa537d64365f49eb
 {% endschema %}
