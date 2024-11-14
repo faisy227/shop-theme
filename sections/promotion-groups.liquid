@@ -5,7 +5,7 @@
 {% for block in section.blocks %}
   {% if block.type == "promotion" %}
     <h3>{{ block.settings.title }}</h3>
-    {{ block.settings.image | | image_url: width: 500, height: 500 | image_tag }}
+    {{ block.settings.image | image_url: width: 500, height: 500 | image_tag }}
   {% endif %}
 {% endfor %}
 {% schema %}
@@ -18,7 +18,7 @@
         "type": "text",
         "label": "Title",
         "id": "title",
-        "default": "Welcome to Our Store"
+        "default": "Welcom!e to Our Store"
       }, {
         "type": "select",
         "label": "Title Alignment",
