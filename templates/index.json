@@ -147,7 +147,8 @@
         "promotion_A6cLDD": {
           "type": "promotion",
           "settings": {
-            "title": ""
+            "title": "Third",
+            "image": "shopify://shop_images/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg"
           }
         }
       },
