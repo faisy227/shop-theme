@@ -1,6 +1,13 @@
 {% comment %} get the value {% endcomment %}
 <h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
 {% comment %} se {% endcomment %}
+
+{% for block in section.blocks %}
+  {% if block.type == "promotion" %}
+    <h3>{{ block.settings.title }}</h3>
+    {{ block.settings.image | img_url: width: 500 |  image_tag }}
+  {% endif %}
+{% endfor %}
 {% schema %}
   {
     "name": "Promotions Group",
