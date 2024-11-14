@@ -1,5 +1,6 @@
 {% comment %} get the value {% endcomment %}
- <h2>{{ section.settings.title }}</h2>
+ <h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
+ {% comment %} se {% endcomment %}
 {% schema %}
   {
     "name": "Promotions Group",
@@ -11,6 +12,27 @@
             "label": "Title",
             "id": "title",
             "default": "Welcome to Our Store"
+        }, 
+        {
+          "type": "select",
+          "label": "Title Alignment", 
+          "id": "title_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+            
+          ],
+          "default": "left"
         }
     ],
     "presets": [
