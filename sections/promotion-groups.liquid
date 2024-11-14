@@ -1,44 +1,58 @@
 {% comment %} get the value {% endcomment %}
- <h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
- {% comment %} se {% endcomment %}
+<h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
+{% comment %} se {% endcomment %}
 {% schema %}
   {
     "name": "Promotions Group",
     "tag": "section",
     "class": "my-wrapper-class",
     "settings": [
-        {
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default": "Welcome to Our Store"
+      }, {
+        "type": "select",
+        "label": "Title Alignment",
+        "id": "title_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+
+        ],
+        "default": "left"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "promotion",
+        "name": "Promotion",
+        "settings": [
+          {
             "type": "text",
-            "label": "Title",
             "id": "title",
-            "default": "Welcome to Our Store"
-        }, 
-        {
-          "type": "select",
-          "label": "Title Alignment", 
-          "id": "title_alignment",
-          "options": [
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-            
-          ],
-          "default": "left"
-        }
+            "label": "title"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
     ],
     "presets": [
-        {
-            "name": "Promotions"
-        }
+      {
+        "name": "Promotions"
+      }
     ]
   }
 {% endschema %}
