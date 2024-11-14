@@ -130,7 +130,8 @@
     "promotion_groups_BrVmYa": {
       "type": "promotion-groups",
       "settings": {
-        "title": "Promotion One!!!"
+        "title": "Promotion One!!!",
+        "title_alignment": "center"
       }
     }
   },
