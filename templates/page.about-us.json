@@ -15,24 +15,24 @@
         "heading_pLELCW": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "About",
             "heading_size": "h1"
           }
         },
         "text_qRhcwp": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "This is the history of my store",
             "text_style": "body"
           }
         },
         "buttons_JHkaCB": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "History",
             "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "Blog",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
