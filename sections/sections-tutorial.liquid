@@ -22,7 +22,15 @@
 <h2>Select Settings</h2>
 <p>{{ section.settings.select_setting }}</p>
 
+{% comment %} <h2> Settings</h2>
+<p>{{ section.settings }}</p> {% endcomment %}
 
+<h2>Checkbox Settings</h2>
+{% if section.settings.checkbox_setting == true %}
+    <p>Checkbox is true</p>   
+    {% else %}
+        <p>Checkbox is false</p> 
+{% endif %}
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -96,6 +104,12 @@
                      "group": "group-2"
                 }
             ]
+        },
+        {
+           "type": "checkbox",
+            "id": "checkbox_setting",
+            "label": "Checkbox Setting", 
+            "default": "true"
         }
     ],
     "blocks": [],
