@@ -191,6 +191,12 @@
           "the-multi-location-snowboard",
           "the-out-of-stock-snowboard",
           "the-videographer-snowboard"
+        ],
+        "collection_setting": "empty-collection",
+        "collection_list_setting": [
+          "hydrogen-1",
+          "hydrogen",
+          "empty-collection"
         ]
       }
     }
