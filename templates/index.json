@@ -165,11 +165,10 @@
     "sections_tutorial_eC6pCP": {
       "type": "sections-tutorial",
       "settings": {
-        "text_setting": "This is a text input",
-        "textarea_setting": "These are textarea\nThis is the first line\nthis is a new line",
+        "text_setting": "This is my first setting",
+        "textarea_setting": "This is the first line\nthis is a new line",
         "richtext_setting": "<p>This is a p tag</p><p>this make a new line automatically</p><p><strong>This is a bold line</strong></p><p><em>This is an italic line</em></p><ul><li>this is a bullet point</li><li>another bullet point</li></ul><h2>This is an h2 tag</h2><p></p><p></p>",
-        "inline_richtext_setting": "This is an inline rich text",
-        "number_setting": 120
+        "inline_richtext_setting": ""
       }
     }
   },
