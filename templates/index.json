@@ -165,7 +165,8 @@
     "sections_tutorial_eC6pCP": {
       "type": "sections-tutorial",
       "settings": {
-        "text_setting": "This is my first setting"
+        "text_setting": "This is my first setting",
+        "textarea_setting": "Hello, I am typing with the text area!!!\nThis is a new line?"
       }
     }
   },
