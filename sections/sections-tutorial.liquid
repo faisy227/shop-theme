@@ -91,6 +91,10 @@
 <div>
     {{ section.settings.liquid_setting }}
 </div>
+
+<h2>Product Setting</h2>
+{% comment %} the project object {% endcomment %}
+<p>{{ section.settings.product_setting }} |||{{ section.settings.product_setting.title }}</p>
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -220,6 +224,11 @@
         "type": "liquid",
         "id": "liquid_setting",
         "label": "Liquid Setting"
+      },
+      {
+        "type": "product",
+        "id": "product_setting",
+        "label": "product Setting"
       }
       
     ],
