@@ -10,8 +10,11 @@
 {% comment %} wrap in div, since richtext adds html itself {% endcomment %}
 <div>{{ section.settings.richtext_setting }}</div>
 
-<h1>Inline Richtext Settings</h1>
+<h2>Inline Richtext Settings</h2>
 <div>{{ section.settings.inline_richtext_setting }}</div>
+
+<h2>Number Settings</h2>
+<p>{{ section.settings.number_setting }}</p>
 
 {% schema %}
   {
@@ -34,7 +37,6 @@
             "id": "textarea_setting",
             "label": "Text Area Setting",
             "placeholder": "This a placehold"
-           
         },
         {
             "type": "richtext",
@@ -45,6 +47,12 @@
             "type": "inline_richtext",
             "id": "inline_richtext_setting",
             "label": "Inline Richtext Setting"
+        },
+        {
+            "type": "number",
+            "id": "number_setting",
+            "label": "Number Setting",
+            "placeholder": "This a placehold"
         }
 
     ],
