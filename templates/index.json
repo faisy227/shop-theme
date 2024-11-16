@@ -197,7 +197,11 @@
           "hydrogen-1",
           "hydrogen",
           "empty-collection"
-        ]
+        ],
+        "page_setting": "about-us",
+        "article_setting": "",
+        "blog_setting": "news",
+        "link_setting": "footer"
       }
     }
   },
