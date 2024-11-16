@@ -82,6 +82,15 @@
 <a href="{{ section.settings.URL_setting }}">url settings here</a>
 
 
+<h2>HTML Setting</h2>
+<div>
+    {{ section.settings.html_setting }}
+</div>
+
+<h2>Liquid Setting</h2>
+<div>
+    {{ section.settings.liquid_setting }}
+</div>
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -201,9 +210,18 @@
         "type": "url",
         "id": "URL_setting",
         "label": "URL Setting"
+      },
+      {
+        "type": "html",
+        "id": "html_setting",
+        "label": "HTML Setting"
+      },
+      {
+        "type": "liquid",
+        "id": "liquid_setting",
+        "label": "Liquid Setting"
       }
-
-
+      
     ],
     "blocks": [],
     "presets": [
