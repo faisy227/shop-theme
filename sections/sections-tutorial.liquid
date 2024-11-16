@@ -4,7 +4,7 @@
 
 <h2>Text area Settings</h2>
 {% comment %} filter allows newline to display as seperate {% endcomment %}
-<p>{{ section.settings.textarea_setting |  newline_to_br }}</p>
+<p>{{ section.settings.textarea_setting | newline_to_br }}</p>
 
 <h2>Rich Text Settings</h2>
 {% comment %} wrap in div, since richtext adds html itself {% endcomment %}
@@ -22,22 +22,28 @@
 <h2>Select Settings</h2>
 <p>{{ section.settings.select_setting }}</p>
 
-{% comment %} <h2> Settings</h2>
-<p>{{ section.settings }}</p> {% endcomment %}
 
 <h2>Checkbox Settings</h2>
 {% if section.settings.checkbox_setting == true %}
-    <p>Checkbox is true</p>   
-    {% else %}
-        <p>Checkbox is false</p> 
+  <p>Checkbox is true</p>
+{% else %}
+  <p>Checkbox is false</p>
 {% endif %}
 
 <h2>Radio Settings</h2>
-<p>{{ section.settings.radio_setting }}</p> 
+<p>{{ section.settings.radio_setting }}</p>
+{% comment %} <h2> Settings</h2>
+<p>{{ section.settings }}</p> {% endcomment %}
+<h2>
+  Color Settings</h2>
+{% comment %} default is a hex {% endcomment %}
+{% comment %} its a color object, so u could get more values {% endcomment %}
+<p style="color: {{ section.settings.color_setting }};">{{ section.settings.color_setting }}</p>
 
-
-
-
+<div style="background: {{ section.settings.bgcolor_setting }};">
+  <h2>Background Color Settings</h2>
+  <p>{{ section.settings.bgcolor_setting }}</p>
+</div>
 
 
 {% schema %}
@@ -47,105 +53,104 @@
     "class": "section-tutorial",
     "limit": 2,
     "settings": [
-        {
-            "type": "text",
-            "id": "text_setting",
-            "label": "Theme Settings",
-            "default": "This is my first setting",
-            "info": "This is some helper text",
-            "placeholder": "This a placehold"
-        },
-        {
-            "type": "textarea",
-            "id": "textarea_setting",
-            "label": "Text Area Setting",
-            "placeholder": "This a placehold"
-        },
-        {
-            "type": "richtext",
-            "id": "richtext_setting",
-            "label": "RichText Setting"
-        },
-        {
-            "type": "inline_richtext",
-            "id": "inline_richtext_setting",
-            "label": "Inline Richtext Setting"
-        },
-        {
-            "type": "number",
-            "id": "number_setting",
-            "label": "Number Setting",
-            "placeholder": "0"
-        },
-        {
-            "type": "range",
-            "id": "range_setting",
-            "label": "Range Setting",
-            "min": 50,
-            "max": 150,
-            "step": 5,
-            "unit": "px",
-            "default": 60
-        },
-        {
-            "type": "select",
-            "id": "select_setting",
-            "label": "Select Setting",
-            "options": [
-                {
-                    "value": "value-1",
-                    "label": "Value One",
-                     "group": "group-1"
-                },
-                {
-                    "value": "value-2",
-                    "label": "Value Two",
-                     "group": "group-1"
-                },
-                {
-                    "value": "value-3",
-                    "label": "Value Three",
-                    "group": "group-2"
-                },
-                {
-                    "value": "value-4",
-                    "label": "Value Four",
-                     "group": "group-2"
-                }
-            ]
-        },
-        {
-           "type": "checkbox",
-            "id": "checkbox_setting",
-            "label": "Checkbox Setting", 
-            "default": true
-        },
-        {
-           "type": "radio",
-            "id": "radio_setting",
-            "label": "Radio Setting", 
-           "options": [
-            {
-                "value": "value-1",
-                "label": "Value One" 
-            },
-            {
-                "value": "value-2",
-                "label": "Value Two" 
-            },
-            {
-                "value": "value-3",
-                "label": "Value Three" 
-            }
-           ]
-        }
+      {
+        "type": "text",
+        "id": "text_setting",
+        "label": "Theme Settings",
+        "default": "This is my first setting",
+        "info": "This is some helper text",
+        "placeholder": "This a placehold"
+      },
+      {
+        "type": "textarea",
+        "id": "textarea_setting",
+        "label": "Text Area Setting",
+        "placeholder": "This a placehold"
+      },
+      {
+        "type": "richtext",
+        "id": "richtext_setting",
+        "label": "RichText Setting"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "inline_richtext_setting",
+        "label": "Inline Richtext Setting"
+      }, {
+        "type": "number",
+        "id": "number_setting",
+        "label": "Number Setting",
+        "placeholder": "0"
+      }, {
+        "type": "range",
+        "id": "range_setting",
+        "label": "Range Setting",
+        "min": 50,
+        "max": 150,
+        "step": 5,
+        "unit": "px",
+        "default": 60
+      }, {
+        "type": "select",
+        "id": "select_setting",
+        "label": "Select Setting",
+        "options": [
+          {
+            "value": "value-1",
+            "label": "Value One",
+            "group": "group-1"
+          }, {
+            "value": "value-2",
+            "label": "Value Two",
+            "group": "group-1"
+          }, {
+            "value": "value-3",
+            "label": "Value Three",
+            "group": "group-2"
+          }, {
+            "value": "value-4",
+            "label": "Value Four",
+            "group": "group-2"
+          }
+        ]
+      }, {
+        "type": "checkbox",
+        "id": "checkbox_setting",
+        "label": "Checkbox Setting",
+        "default": true
+      }, {
+        "type": "radio",
+        "id": "radio_setting",
+        "label": "Radio Setting",
+        "options": [
+          {
+            "value": "value-1",
+            "label": "Value One"
+          }, {
+            "value": "value-2",
+            "label": "Value Two"
+          }, {
+            "value": "value-3",
+            "label": "Value Three"
+          }
+        ]
+      }, {
+        "type": "color",
+        "id": "color_setting",
+        "label": "Color Setting"
+      }, {
+        "type": "color_background",
+        "id": "bgcolor_setting",
+        "label": "Color Background Setting"
+      }
+
     ],
     "blocks": [],
     "presets": [
-        {
-            "name": "Section Tutorial",
-            "settings": {}
-        }
+      {
+        "name": "Section Tutorial",
+        "settings": {}
+      }
     ]
   }
 {% endschema %}
