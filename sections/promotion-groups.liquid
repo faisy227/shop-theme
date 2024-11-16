@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% comment %} get the value {% endcomment %}
 <h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
 {% comment %} se {% endcomment %}
@@ -79,4 +80,87 @@
       }
     ]
   }
+=======
+{% comment %} get the value {% endcomment %}
+<h2 style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.title }}</h2>
+{% comment %} se {% endcomment %}
+<style>
+   .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card h3{
+    text-align: center;
+  }
+  .card img{
+    width: 200px;
+    height: 200px;
+  }
+</style>
+<div class="card-container">
+  {% for block in section.blocks %}
+    {% if block.type == "promotion" %}
+     <div class="card">
+      <h3>{{ block.settings.title }}</h3>
+      {{ block.settings.image | image_url: width: 500, height: 500 | image_tag }}
+     </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "Promotions Group",
+    "tag": "section",
+    "class": "my-wrapper-class",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default": "Welcom!e to Our Store"
+      }, {
+        "type": "select",
+        "label": "Title Alignment",
+        "id": "title_alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          }, {
+            "value": "center",
+            "label": "Center"
+          }, {
+            "value": "right",
+            "label": "Right"
+          }
+
+        ],
+        "default": "left"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "promotion",
+        "name": "Promotion",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "title"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Promotions"
+      }
+    ]
+  }
+>>>>>>> fa3ad0be794081d74ae605a2971f617e55d978d6
 {% endschema %}
