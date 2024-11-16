@@ -58,11 +58,26 @@
 
 <div>
     <h2>Video Settings</h2>
-    {{ section.settings.video_setting |  video_tag: controls: true, style: 'height: 300px; width: 500px;'}}
+    {{ section.settings.video_setting |  video_tag: controls: true, style: 'height: 300px; width: 500px;' }}
 </div> 
 
 {% comment %} <h2> Settings</h2> {% endcomment %}
 {% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
+
+{% comment %} allows you to play videos from our sources via links 
+ get iframe from the youtube >> share >> embed >> copy and paste
+{% endcomment %}
+<h2>Video URL Settings</h2>
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/{{ section.settings.videoURL_setting }}" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
 
 
 
@@ -172,6 +187,15 @@
         "type": "video",
         "id": "video_setting",
         "label": "Video Setting"
+      },
+      {
+        "type": "video_url",
+        "id": "videoURL_setting",
+        "label": "Video URL Setting",
+        "accept": [
+            "youtube"
+        ],
+        "placeholder": "Youtube URL"
       }
 
 
