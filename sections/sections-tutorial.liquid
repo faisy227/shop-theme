@@ -3,7 +3,12 @@
 <p>{{ section.settings.text_setting }}</p>
 
 <h2>Text area Settings</h2>
+{% comment %} filter allows newline to display as seperate {% endcomment %}
 <p>{{ section.settings.textarea_setting |  newline_to_br }}</p>
+
+<h2>Rich Text Settings</h2>
+{% comment %} wrap in div, since richtext adds html itself {% endcomment %}
+<div>{{ section.settings.richtext_setting }}</div>
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -21,9 +26,14 @@
         {
             "type": "textarea",
             "id": "textarea_setting",
-            "label": "Text Area Setting",
+            "label": "Text Area Setting"
            
         },
+        {
+            "type": "richtext",
+            "id": "richtext_setting",
+            "label": "Rich Text Setting"
+        }
 
     ],
     "blocks": [
