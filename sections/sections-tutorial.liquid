@@ -57,6 +57,11 @@
     
 {% endif %}
 
+<div>
+    <h2>Video Settings</h2>
+    {{ section.settings.video_setting |  video_tag: controls: true}}
+</div> 
+
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -158,6 +163,11 @@
         "type": "image_picker",
         "id": "image_setting",
         "label": "Image Picker Setting"
+      },
+      {
+        "type": "video",
+        "id": "video_setting",
+        "label": "Video Setting"
       }
 
 
