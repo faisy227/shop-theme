@@ -50,7 +50,10 @@
 
 {% if section.settings.image_setting %}
     <h2> Image Picker Settings</h2>
-    <p>{{ section.settings.image_setting | image_url: width: 400 |  image_tag}}</p> 
+    {{ 
+    section.settings.image_setting 
+    | image_url: width: 400 
+    | image_tag: style: 'height: 200px; object-fit: cover;'}}
     
 {% endif %}
 
