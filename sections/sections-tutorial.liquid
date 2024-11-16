@@ -32,8 +32,7 @@
 
 <h2>Radio Settings</h2>
 <p>{{ section.settings.radio_setting }}</p>
-{% comment %} <h2> Settings</h2>
-<p>{{ section.settings }}</p> {% endcomment %}
+
 <h2>
   Color Settings</h2>
 {% comment %} default is a hex {% endcomment %}
@@ -42,9 +41,15 @@
 
 <div style="background: {{ section.settings.bgcolor_setting }};">
   <h2>Background Color Settings</h2>
+  {% comment %} outputs a string NOT an object {% endcomment %}
   <p>{{ section.settings.bgcolor_setting }}</p>
 </div>
 
+ {% comment %} <h2> Settings</h2> {% endcomment %}
+{% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
+
+<h2> Image Picker Settings</h2>
+<p>{{ section.settings.image_setting | image_url: width: 400 |  image_tag}}</p> 
 
 {% schema %}
   {
@@ -142,7 +147,13 @@
         "type": "color_background",
         "id": "bgcolor_setting",
         "label": "Color Background Setting"
+      },
+       {
+        "type": "image_picker",
+        "id": "image_setting",
+        "label": "Image Picker Setting"
       }
+
 
     ],
     "blocks": [],
