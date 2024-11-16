@@ -168,8 +168,11 @@
         "text_setting": "This is my first setting",
         "textarea_setting": "This is the first line\nthis is a new line",
         "richtext_setting": "<p>This is a p tag</p><p>this make a new line automatically</p><p><strong>This is a bold line</strong></p><p><em>This is an italic line</em></p><ul><li>this is a bullet point</li><li>another bullet point</li></ul><h2>This is an h2 tag</h2><p></p><p></p>",
-        "inline_richtext_setting": "",
-        "range_setting": 85
+        "inline_richtext_setting": "this is INLINE richtext",
+        "number_setting": 113,
+        "range_setting": 85,
+        "select_setting": "value-1",
+        "checkbox_setting": false
       }
     }
   },
