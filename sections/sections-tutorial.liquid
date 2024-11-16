@@ -3,7 +3,7 @@
 <p>{{ section.settings.text_setting }}</p>
 
 <h2>Text area Settings</h2>
-<p>{{ section.settings.textarea_setting }}</p>
+<p>{{ section.settings.textarea_setting |  newline_to_br }}</p>
 {% schema %}
   {
     "name": "Sections Tutorial",
