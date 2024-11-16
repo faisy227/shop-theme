@@ -171,8 +171,9 @@
         "inline_richtext_setting": "this is INLINE richtext",
         "number_setting": 113,
         "range_setting": 85,
-        "select_setting": "value-1",
-        "checkbox_setting": false
+        "select_setting": "value-2",
+        "checkbox_setting": false,
+        "radio_setting": "value-3"
       }
     }
   },
