@@ -130,18 +130,18 @@
     "promotion_groups_BrVmYa": {
       "type": "promotion-groups",
       "blocks": {
-        "promotion_LdRrX6": {
-          "type": "promotion",
-          "settings": {
-            "title": "First",
-            "image": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
-          }
-        },
         "promotion_mjJr9J": {
           "type": "promotion",
           "settings": {
             "title": "Second",
             "image": "shopify://shop_images/Main_d624f226-0a89-4fe1-b333-0d1548b43c06.jpg"
+          }
+        },
+        "promotion_LdRrX6": {
+          "type": "promotion",
+          "settings": {
+            "title": "First",
+            "image": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
           }
         },
         "promotion_A6cLDD": {
@@ -153,8 +153,8 @@
         }
       },
       "block_order": [
-        "promotion_LdRrX6",
         "promotion_mjJr9J",
+        "promotion_LdRrX6",
         "promotion_A6cLDD"
       ],
       "settings": {
