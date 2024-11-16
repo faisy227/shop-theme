@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -5,11 +14,17 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "settings": { "heading": "My Image Banner", "heading_size": "h0" }
+          "settings": {
+            "heading": "My Image Banner",
+            "heading_size": "h0"
+          }
         },
         "text_qjdg9a": {
           "type": "text",
-          "settings": { "text": "This is a text block", "text_style": "body" }
+          "settings": {
+            "text": "This is a text block",
+            "text_style": "body"
+          }
         },
         "button": {
           "type": "buttons",
@@ -23,7 +38,11 @@
           }
         }
       },
-      "block_order": ["heading", "text_qjdg9a", "button"],
+      "block_order": [
+        "heading",
+        "text_qjdg9a",
+        "button"
+      ],
       "settings": {
         "image": "shopify://shop_images/theme_cover_image.jpg",
         "image_overlay_opacity": 40,
@@ -94,7 +113,11 @@
           }
         }
       },
-      "block_order": ["heading_zhtQBW", "text_BwDALL", "button_6aUNef"],
+      "block_order": [
+        "heading_zhtQBW",
+        "text_BwDALL",
+        "button_6aUNef"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -134,16 +157,18 @@
         "promotion_LdRrX6",
         "promotion_A6cLDD"
       ],
-      "settings": { "title": "Promotion One!!!", "title_alignment": "center" }
+      "settings": {
+        "title": "Promotion One!!!",
+        "title_alignment": "center"
+      }
     },
     "sections_tutorial_eC6pCP": {
       "type": "sections-tutorial",
       "settings": {
         "text_setting": "This is my first setting",
-        "textarea_setting": "Hello, I am typing with the text area!!!\nThis is a new line?",
-        "richtext_setting": "<p>This is some rich text setting!</p><p>This is a newline by default</p><p>These lines are p tags</p><p><strong>This line is bold</strong></p><p><em>This line is in itlalitics</em></p><ul><li>this is a bullet point</li><li>another bullet point</li></ul><p><a href=\"https://google.com\" title=\"https://google.com\">this is a link it goes to google's website</a></p><h2>This is an h2</h2>",
-        "inline_richtext_setting": "inline rich text has less controls!",
-        "number_setting": 12
+        "textarea_setting": "This is the first line\nthis is a new line",
+        "richtext_setting": "<p>This is a p tag</p><p>this make a new line automatically</p><p><strong>This is a bold line</strong></p><p><em>This is an italic line</em></p><ul><li>this is a bullet point</li><li>another bullet point</li></ul><p></p>",
+        "inline_richtext_setting": ""
       }
     }
   },
