@@ -161,12 +161,19 @@
         "title": "Promotion One!!!",
         "title_alignment": "center"
       }
+    },
+    "sections_tutorial_it7Udc": {
+      "type": "sections-tutorial",
+      "settings": {
+        "text_setting": "This is my first setting"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "rich_text_qmRRDt",
-    "promotion_groups_BrVmYa"
+    "promotion_groups_BrVmYa",
+    "sections_tutorial_it7Udc"
   ]
 }
