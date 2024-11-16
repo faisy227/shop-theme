@@ -201,7 +201,9 @@
         "page_setting": "about-us",
         "article_setting": "",
         "blog_setting": "news",
-        "link_setting": "footer"
+        "link_setting": "footer",
+        "title_alignment": "left",
+        "font_settings": "abril_fatface_n4"
       }
     }
   },
