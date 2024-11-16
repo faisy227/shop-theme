@@ -107,6 +107,19 @@
     </p>
 {% endfor %}
 
+<h2>collection Setting</h2>
+{% comment %} the project object {% endcomment %}
+<p>
+    {{ section.settings.collection_setting }} |||{{ section.settings.collection_setting.title }}
+</p>
+
+<h2>collection List Setting</h2>
+{% for collection in section.settings.collection_list_setting %}
+    <p>
+    {{ collection.handle }} | {{ collection.title }} -- {{ collection.products }}
+    </p>
+{% endfor %}
+
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -245,7 +258,19 @@
       {
         "type": "product_list",
         "id": "product_list_setting",
-        "label": "Product List Setting"
+        "label": "Product List Setting",
+        "limit": 10
+      },
+      {
+        "type": "collection",
+        "id": "collection_setting",
+        "label": "Collection Setting"
+      },
+      {
+        "type": "collection_list",
+        "id": "collection_list_setting",
+        "label": "Collection List Setting",
+        "limit": 10
       }
     ],
     "blocks": [],
