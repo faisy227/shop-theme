@@ -78,7 +78,8 @@
     referrerpolicy="strict-origin-when-cross-origin" 
     allowfullscreen>
 </iframe>
-
+<h2>URL Settings</h2>
+<a href="{{ section.settings.URL_setting }}">url settings here</a>
 
 
 {% schema %}
@@ -194,8 +195,12 @@
         "label": "Video URL Setting",
         "accept": [
             "youtube"
-        ],
-        "placeholder": "Youtube URL"
+        ]
+      },
+      {
+        "type": "url",
+        "id": "URL_setting",
+        "label": "URL Setting"
       }
 
 
