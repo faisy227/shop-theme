@@ -178,7 +178,8 @@
         "bgcolor_setting": "radial-gradient(rgba(109, 207, 255, 1), rgba(116, 255, 147, 1) 63.871%, rgba(120, 196, 245, 1) 100%)",
         "image_setting": "shopify://shop_images/Main_9129b69a-0c7b-4f66-b6cf-c4222f18028a.jpg",
         "video_setting": "shopify://files/videos/2231485-sd_640_360_24fps.mp4",
-        "videoURL_setting": "https://youtu.be/qBRaI0ZeAf8?si=-EnzAIh_EAgbCOgT"
+        "videoURL_setting": "https://youtu.be/qBRaI0ZeAf8?si=-EnzAIh_EAgbCOgT",
+        "URL_setting": "https://google.com"
       }
     }
   },
