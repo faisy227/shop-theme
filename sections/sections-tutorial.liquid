@@ -36,7 +36,8 @@
 {% comment %} <h2> Settings</h2>
 <p>{{ section.settings }}</p> {% endcomment %}
  <h2> Color Settings</h2>
-<p>{{ section.settings.color_setting }}</p> 
+ {% comment %} default is a hex {% endcomment %}
+<p style="color: {{ section.settings.color_setting }};">{{ section.settings.color_setting }}</p> 
 
 
 
