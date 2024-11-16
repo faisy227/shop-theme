@@ -45,8 +45,7 @@
   <p>{{ section.settings.bgcolor_setting }}</p>
 </div>
 
- {% comment %} <h2> Settings</h2> {% endcomment %}
-{% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
+ 
 
 {% if section.settings.image_setting %}
     <h2> Image Picker Settings</h2>
@@ -59,8 +58,13 @@
 
 <div>
     <h2>Video Settings</h2>
-    {{ section.settings.video_setting |  video_tag: controls: true}}
+    {{ section.settings.video_setting |  video_tag: controls: true, style: 'height: 500px; width: 500px;'}}
 </div> 
+
+{% comment %} <h2> Settings</h2> {% endcomment %}
+{% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
+
+
 
 {% schema %}
   {
