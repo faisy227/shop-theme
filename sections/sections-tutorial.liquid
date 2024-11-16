@@ -48,8 +48,11 @@
  {% comment %} <h2> Settings</h2> {% endcomment %}
 {% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
 
-<h2> Image Picker Settings</h2>
-<p>{{ section.settings.image_setting | image_url: width: 400 |  image_tag}}</p> 
+{% if section.settings.image_setting %}
+    <h2> Image Picker Settings</h2>
+    <p>{{ section.settings.image_setting | image_url: width: 400 |  image_tag}}</p> 
+    
+{% endif %}
 
 {% schema %}
   {
