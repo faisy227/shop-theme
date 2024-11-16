@@ -166,7 +166,8 @@
       "type": "sections-tutorial",
       "settings": {
         "text_setting": "This is my first setting",
-        "textarea_setting": "Hello, I am typing with the text area!!!\nThis is a new line?"
+        "textarea_setting": "Hello, I am typing with the text area!!!\nThis is a new line?",
+        "richtext_setting": "<p>This is some rich text setting!</p><p>This is a newline by default</p><p>These lines are p tags</p><p><strong>This line is bold</strong></p><p><em>This line is in itlalitics</em></p>"
       }
     }
   },
