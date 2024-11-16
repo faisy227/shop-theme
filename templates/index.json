@@ -181,8 +181,7 @@
         "videoURL_setting": "https://youtu.be/qBRaI0ZeAf8?si=-EnzAIh_EAgbCOgT",
         "URL_setting": "https://google.com",
         "html_setting": "<p>Hello</p>",
-        "liquid_setting": "{{ shop.name }}",
-        "product_setting": "selling-plans-ski-wax"
+        "liquid_setting": "{{ shop.name }}"
       }
     }
   },

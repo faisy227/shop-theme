@@ -94,7 +94,19 @@
 
 <h2>Product Setting</h2>
 {% comment %} the project object {% endcomment %}
-<p>{{ section.settings.product_setting }} |||{{ section.settings.product_setting.title }}</p>
+<p>
+    {{ section.settings.product_setting }} |||{{ section.settings.product_setting.title }}
+    {{ section.settings.product_setting.variants[0].price }}
+</p>
+
+<h2>Product List Setting</h2>
+{% for product in section.settings.product_list_setting %}
+    <p>
+    {{ section.settings.product_setting }} |||{{ section.settings.product_setting.title }}
+    {{ section.settings.product_setting.variants[0].price }}
+</p>
+{% endfor %}
+
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -228,9 +240,13 @@
       {
         "type": "product",
         "id": "product_setting",
-        "label": "product Setting"
+        "label": "Product Setting"
+      },
+      {
+        "type": "product_list",
+        "id": "product_list_setting",
+        "label": "Product List Setting"
       }
-      
     ],
     "blocks": [],
     "presets": [
