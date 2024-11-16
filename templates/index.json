@@ -166,7 +166,7 @@
       "type": "sections-tutorial",
       "settings": {
         "text_setting": "This is my first setting",
-        "textarea_setting": "Hello, I am typing with the text area"
+        "textarea_setting": "Hello, I am typing with the text area!!!"
       }
     }
   },
