@@ -45,11 +45,93 @@
   <p>{{ section.settings.bgcolor_setting }}</p>
 </div>
 
- {% comment %} <h2> Settings</h2> {% endcomment %}
+ 
+
+{% if section.settings.image_setting %}
+    <h2> Image Picker Settings</h2>
+    {{ 
+    section.settings.image_setting 
+    | image_url: width: 400 
+    | image_tag: style: 'height: 200px; object-fit: cover;'}}
+    
+{% endif %}
+
+<div>
+    <h2>Video Settings</h2>
+    {{ section.settings.video_setting |  video_tag: controls: true, style: 'height: 300px; width: 500px;' }}
+</div> 
+
+{% comment %} <h2> Settings</h2> {% endcomment %}
 {% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
 
-<h2> Image Picker Settings</h2>
-<p>{{ section.settings.image_setting | image_url: width: 400 |  image_tag}}</p> 
+{% comment %} allows you to play videos from our sources via links 
+ get iframe from the youtube >> share >> embed >> copy and paste
+{% endcomment %}
+<h2>Video URL Settings</h2>
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/{{ section.settings.videoURL_setting.id }}" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+<h2>URL Settings</h2>
+<a href="{{ section.settings.URL_setting }}">url settings here</a>
+
+
+<h2>HTML Setting</h2>
+<div>
+    {{ section.settings.html_setting }}
+</div>
+
+<h2>Liquid Setting</h2>
+<div>
+    {{ section.settings.liquid_setting }}
+</div>
+
+<h2>Product Setting</h2>
+{% comment %} the project object {% endcomment %}
+<p>
+    {{ section.settings.product_setting }} |||{{ section.settings.product_setting.title }}
+    {{ section.settings.product_setting.price |  money }}
+</p>
+
+<h2>Product List Setting</h2>
+{% for product in section.settings.product_list_setting %}
+    <p>
+    {{ product }} | {{ product.title }}
+    {{ section.settings.product_list_setting.price |  money }}
+    </p>
+{% endfor %}
+
+<h2>collection Setting</h2>
+{% comment %} the project object {% endcomment %}
+<p>
+    {{ section.settings.collection_setting }} |||{{ section.settings.collection_setting.title }}
+</p>
+
+<h2>collection List Setting</h2>
+{% for collection in section.settings.collection_list_setting %}
+    <p>
+    {{ collection.handle }} | {{ collection.title }} -- {{ collection.products }}
+    </p>
+{% endfor %}
+
+<h2>Page Setting</h2>
+ <p>{{ section.settings.page_setting.title }}</p>
+
+<h2>Article Setting</h2>
+<p>{{ section.settings.article_setting.title }}</p>
+
+<h2>Blog Setting</h2>
+<p>{{ section.settings.blog_setting.title }}</p>
+
+<h2>Link List Setting</h2>
+<p>{{ section.settings.link_setting.title }}</p>
+
 
 {% schema %}
   {
@@ -152,8 +234,76 @@
         "type": "image_picker",
         "id": "image_setting",
         "label": "Image Picker Setting"
+      },
+      {
+        "type": "video",
+        "id": "video_setting",
+        "label": "Video Setting"
+      },
+      {
+        "type": "video_url",
+        "id": "videoURL_setting",
+        "label": "Video URL Setting",
+        "accept": [
+            "youtube"
+        ]
+      },
+      {
+        "type": "url",
+        "id": "URL_setting",
+        "label": "URL Setting"
+      },
+      {
+        "type": "html",
+        "id": "html_setting",
+        "label": "HTML Setting"
+      },
+      {
+        "type": "liquid",
+        "id": "liquid_setting",
+        "label": "Liquid Setting"
+      },
+      {
+        "type": "product",
+        "id": "product_setting",
+        "label": "Product Setting"
+      },
+      {
+        "type": "product_list",
+        "id": "product_list_setting",
+        "label": "Product List Setting",
+        "limit": 10
+      },
+      {
+        "type": "collection",
+        "id": "collection_setting",
+        "label": "Collection Setting"
+      },
+      {
+        "type": "collection_list",
+        "id": "collection_list_setting",
+        "label": "Collection List Setting",
+        "limit": 10
+      },
+      {
+        "type": "page",
+        "id": "page_setting",
+        "label": "Page Setting"
+      }, {
+        "type": "article",
+        "id": "article_setting",
+        "label": "Article Setting"
+      },
+      {
+        "type": "blog",
+        "id": "blog_setting",
+        "label": "Blog Setting"
+      },
+      {
+        "type": "link_list",
+        "id": "link_setting",
+        "label": "Link Setting"
       }
-
 
     ],
     "blocks": [],
