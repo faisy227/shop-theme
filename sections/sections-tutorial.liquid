@@ -31,6 +31,15 @@
     {% else %}
         <p>Checkbox is false</p> 
 {% endif %}
+
+<h2>Radio Settings</h2>
+<p>{{ section.settings.radio_setting }}</p> 
+
+
+
+
+
+
 {% schema %}
   {
     "name": "Sections Tutorial",
@@ -110,6 +119,25 @@
             "id": "checkbox_setting",
             "label": "Checkbox Setting", 
             "default": true
+        },
+        {
+           "type": "radio",
+            "id": "radio_setting",
+            "label": "Radio Setting", 
+           "options": [
+            {
+                "value": "value-1",
+                "label": "Value One" 
+            },
+            {
+                "value": "value-2",
+                "label": "Value Two" 
+            },
+            {
+                "value": "value-3",
+                "label": "Value Three" 
+            }
+           ]
         }
     ],
     "blocks": [],
