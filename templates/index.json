@@ -181,16 +181,7 @@
         "videoURL_setting": "https://youtu.be/qBRaI0ZeAf8?si=-EnzAIh_EAgbCOgT",
         "URL_setting": "https://google.com",
         "html_setting": "<p>Hello</p>",
-        "liquid_setting": "{{ shop.name }}",
-        "product_setting": "gift-card",
-        "product_list_setting": [
-          "selling-plans-ski-wax",
-          "the-multi-managed-snowboard",
-          "the-inventory-not-tracked-snowboard",
-          "the-complete-snowboard",
-          "the-videographer-snowboard",
-          "the-out-of-stock-snowboard"
-        ]
+        "liquid_setting": "{{ shop.name }}"
       }
     }
   },
