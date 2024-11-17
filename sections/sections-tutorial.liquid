@@ -132,6 +132,18 @@
 <h2>Link List Setting</h2>
 <p>{{ section.settings.link_setting.title }}</p>
 
+<h2>Text Alignment Settings</h2>
+<p style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.text_setting }}</p>
+
+<h2>Font Settings</h2>
+<p>Font Setting: {{ section.settings.font_settings.family }}</p>
+
+<style>
+    {{ section.settings.font_settings |  font_face: font_display: "swap" }}
+    .section-tutorial *{
+        font-family: {{ section.settings.font_settings.family }};
+    }
+</style>
 
 {% schema %}
   {
@@ -263,6 +275,11 @@
         "id": "liquid_setting",
         "label": "Liquid Setting"
       },
+        {
+          "type": "header",
+          "content": "SIze ReSources Settings",
+          "info": "Setting related to shopify resourses"
+        },
       {
         "type": "product",
         "id": "product_setting",
@@ -303,8 +320,34 @@
         "type": "link_list",
         "id": "link_setting",
         "label": "Link Setting"
-      }
-
+      },
+      {
+          "type": "select",
+          "label": "Title Alignment",
+          "id": "title_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+           
+          ],
+          "default": "left"
+        },
+        {
+            "type": "font_picker",
+          "label": "Font Settings",
+          "id": "font_settings",
+           "default": "assistant_n4"
+        }
     ],
     "blocks": [],
     "presets": [
