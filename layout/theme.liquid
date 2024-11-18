@@ -315,12 +315,17 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
+    {% comment %} The header {% endcomment %}
     {% sections 'header-group' %}
 
+    {% comment %} just added our group {% endcomment %}
+    {% sections 'demo-section-group' %}
+
+    {% comment %} the template {% endcomment %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
     </main>
-
+    {% comment %} the footer {% endcomment %}
     {% sections 'footer-group' %}
 
     <ul hidden>
