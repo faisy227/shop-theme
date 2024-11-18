@@ -7,13 +7,14 @@
     {% assign image = block.settings.image | default: block.settings.product.featured_image %}
   {% endif %}
 
-  <p>{{ title }}</p>
-
+ <div {{ block.shopify_attributes }}>
+    <p {{ block.shopify_attributes }}>{{ title }}</p>
   {% if image %}
     <div>
     {{ image | image_url: width: 200 | image_tag }}
   </div>
   {% endif %}
+ </div>
   
 {% endfor %}
 
