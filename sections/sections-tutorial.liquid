@@ -3,11 +3,11 @@
 
 <h2>Product</h2>
 {% for product in products %}
-  {% assign title = block.settings.title | default: block.settings.product.title %}
-  {% assign image = block.settings.image | default: block.settings.product.featured_image %}
+  {% assign title = product.settings.title | default: product.settings.product.title %}
+  {% assign image = product.settings.image | default: product.settings.product.featured_image %}
 
-  <div {{ block.shopify_attributes }}>
-    <p {{ block.shopify_attributes }}>{{ title }}</p>
+  <div {{ product.shopify_attributes }}>
+    <p {{ product.shopify_attributes }}>{{ title }}</p>
   {% if image %}
     <div>
     {{ image | image_url: width: 200 | image_tag }}
@@ -20,11 +20,11 @@
 <br>
   <h2>Collections</h2>
   {% for collection in collections %}
-    {% assign title = block.settings.title | default: block.settings.collection.title %}
-    {% assign image = block.settings.image | default: block.settings.collection.featured_image %}
+    {% assign title = collection.settings.title | default: collection.settings.collection.title %}
+    {% assign image = collection.settings.image | default: collection.settings.collection.featured_image %}
   
-    <div {{ block.shopify_attributes }}>
-      <p {{ block.shopify_attributes }}>{{ title }}</p>
+    <div {{ collection.shopify_attributes }}>
+      <p {{ collection.shopify_attributes }}>{{ title }}</p>
     {% if image %}
       <div>
       {{ image | image_url: width: 200 | image_tag }}
