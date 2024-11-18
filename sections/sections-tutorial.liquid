@@ -1,149 +1,13 @@
-<p>Hello World</p>
-<h2>Text Settings</h2>
-<p>{{ section.settings.text_setting }}</p>
+{% for block in section.blocks %}
+  {% if block.type == "section_Collection" %}
+    {% assign title = block.settings.title | default:  block.settings.collection.title %}
+  {% elsif block.type == "section_product" %}
+    {% assign title = block.settings.title | default: block.settings.product.title %}
+  
+  {% endif %}
 
-<h2>Text area Settings</h2>
-{% comment %} filter allows newline to display as seperate {% endcomment %}
-<p>{{ section.settings.textarea_setting | newline_to_br }}</p>
-
-<h2>Rich Text Settings</h2>
-{% comment %} wrap in div, since richtext adds html itself {% endcomment %}
-<div>{{ section.settings.richtext_setting }}</div>
-
-<h2>Inline Richtext Settings</h2>
-<div>{{ section.settings.inline_richtext_setting }}</div>
-
-<h2>Number Settings</h2>
-<p>{{ section.settings.number_setting }}</p>
-
-<h2>Range Settings</h2>
-<p>{{ section.settings.range_setting }}</p>
-
-<h2>Select Settings</h2>
-<p>{{ section.settings.select_setting }}</p>
-
-
-<h2>Checkbox Settings</h2>
-{% if section.settings.checkbox_setting == true %}
-  <p>Checkbox is true</p>
-{% else %}
-  <p>Checkbox is false</p>
-{% endif %}
-
-<h2>Radio Settings</h2>
-<p>{{ section.settings.radio_setting }}</p>
-
-<h2>
-  Color Settings</h2>
-{% comment %} default is a hex {% endcomment %}
-{% comment %} its a color object, so u could get more values {% endcomment %}
-<p style="color: {{ section.settings.color_setting }};">{{ section.settings.color_setting }}</p>
-
-<div style="background: {{ section.settings.bgcolor_setting }};">
-  <h2>Background Color Settings</h2>
-  {% comment %} outputs a string NOT an object {% endcomment %}
-  <p>{{ section.settings.bgcolor_setting }}</p>
-</div>
-
- 
-
-{% if section.settings.image_setting %}
-    <h2> Image Picker Settings</h2>
-    {{ 
-    section.settings.image_setting 
-    | image_url: width: 400 
-    | image_tag: style: 'height: 200px; object-fit: cover;'}}
-    
-{% endif %}
-
-<div>
-    <h2>Video Settings</h2>
-    {{ section.settings.video_setting |  video_tag: controls: true, style: 'height: 300px; width: 500px;' }}
-</div> 
-
-{% comment %} <h2> Settings</h2> {% endcomment %}
-{% comment %} <p>{{ section.settings }}</p>  {% endcomment %}
-
-{% comment %} allows you to play videos from our sources via links 
- get iframe from the youtube >> share >> embed >> copy and paste
-{% endcomment %}
-<h2>Video URL Settings</h2>
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/{{ section.settings.videoURL_setting.id }}" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-</iframe>
-<h2>URL Settings</h2>
-<a href="{{ section.settings.URL_setting }}">url settings here</a>
-
-
-<h2>HTML Setting</h2>
-<div>
-    {{ section.settings.html_setting }}
-</div>
-
-<h2>Liquid Setting</h2>
-<div>
-    {{ section.settings.liquid_setting }}
-</div>
-
-<h2>Product Setting</h2>
-{% comment %} the project object {% endcomment %}
-<p>
-    {{ section.settings.product_setting }} |||{{ section.settings.product_setting.title }}
-    {{ section.settings.product_setting.price |  money }}
-</p>
-
-<h2>Product List Setting</h2>
-{% for product in section.settings.product_list_setting %}
-    <p>
-    {{ product }} | {{ product.title }}
-    {{ section.settings.product_list_setting.price |  money }}
-    </p>
+  <p>{{ title }}</p>
 {% endfor %}
-
-<h2>collection Setting</h2>
-{% comment %} the project object {% endcomment %}
-<p>
-    {{ section.settings.collection_setting }} |||{{ section.settings.collection_setting.title }}
-</p>
-
-<h2>collection List Setting</h2>
-{% for collection in section.settings.collection_list_setting %}
-    <p>
-    {{ collection.handle }} | {{ collection.title }} -- {{ collection.products }}
-    </p>
-{% endfor %}
-
-<h2>Page Setting</h2>
- <p>{{ section.settings.page_setting.title }}</p>
-
-<h2>Article Setting</h2>
-<p>{{ section.settings.article_setting.title }}</p>
-
-<h2>Blog Setting</h2>
-<p>{{ section.settings.blog_setting.title }}</p>
-
-<h2>Link List Setting</h2>
-<p>{{ section.settings.link_setting.title }}</p>
-
-<h2>Text Alignment Settings</h2>
-<p style="text-align: {{ section.settings.title_alignment }};">{{ section.settings.text_setting }}</p>
-
-<h2>Font Settings</h2>
-<p>Font Setting: {{ section.settings.font_settings.family }}</p>
-
-<style>
-    {{ section.settings.font_settings |  font_face: font_display: "swap" }}
-    .section-tutorial *{
-        font-family: {{ section.settings.font_settings.family }};
-    }
-</style>
 
 {% schema %}
   {
@@ -349,7 +213,56 @@
            "default": "assistant_n4"
         }
     ],
-    "blocks": [],
+    "blocks": [
+      {
+        "type": "section_product",
+        "name": "Product",
+        "settings": [
+          {
+            "type": "product",
+            "label": "Product",
+            "id": "product"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "info": "Option. Will override Product Title"
+          },
+          {
+            "type": "image_picker",
+            "label": "Iage",
+            "id": "image",
+            "info": "Option. Will override Product Image"
+          }
+        ],
+        "limit": 5
+      },
+      {
+        "type": "section_Collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "type": "collection",
+            "label": "Collection",
+            "id": "collection"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "info": "Option. Will override Collection Title"
+          },
+          {
+            "type": "image_picker",
+            "label": "Iage",
+            "id": "image",
+            "info": "Option. Will override Collection Image"
+          }
+        ],
+        "limit": 5
+      }
+    ],
     "presets": [
       {
         "name": "Section Tutorial",
