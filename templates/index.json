@@ -169,14 +169,16 @@
           "type": "section_product",
           "settings": {
             "product": "gift-card",
-            "title": "Better Gift Card"
+            "title": "Better Gift Card",
+            "image": "shopify://shop_images/gift_card.png"
           }
         },
         "section_collection_zkPLgU": {
           "type": "section_Collection",
           "settings": {
             "collection": "hydrogen",
-            "title": "Special Offer: Hydrogen"
+            "title": "Special Offer: Hydrogen",
+            "image": "shopify://shop_images/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg"
           }
         }
       },
