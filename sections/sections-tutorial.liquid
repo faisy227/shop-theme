@@ -1,12 +1,18 @@
 {% for block in section.blocks %}
   {% if block.type == "section_Collection" %}
     {% assign title = block.settings.title | default:  block.settings.collection.title %}
+    {% assign image = block.settings.image |  default: blcok.settings.collection.image%}
   {% elsif block.type == "section_product" %}
     {% assign title = block.settings.title | default: block.settings.product.title %}
+    {% assign image = block.settings.image |  default: blcok.settings.product.image%}
   
   {% endif %}
 
   <p>{{ title }}</p>
+
+  <div>
+    {{ image |  image_url: width: 200 |  image_tag  }}
+  </div>
 {% endfor %}
 
 {% schema %}
