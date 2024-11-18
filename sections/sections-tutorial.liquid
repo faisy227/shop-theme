@@ -4,7 +4,7 @@
 <h2>{{ section.settings.text_setting }}</h2>
 
 {% assign products = section.blocks |  where: "type", "section_product" %}
-{% assign collections = section.blocks |  where: "type", "section_Collection" %}
+{% assign collections = section.blocks |  where: "type", "section_collection" %}
 
 <h2>Product</h2>
 {% for product in products %}
@@ -269,7 +269,7 @@
         "limit": 5
       },
       {
-        "type": "section_Collection",
+        "type": "section_collection",
         "name": "Collection",
         "settings": [
           {
@@ -317,11 +317,44 @@
       },
       {
         "name": "Section Tutorial with Collections",
-        "settings": {}
+       "blocks": [
+          {
+            "type": "section_collection",
+            "settings": {
+             "collection": "hydrogen-1"
+            }
+          },
+          {
+            "type": "section_collection",
+            "settings": {
+              "collection": "hydrogen-1",
+              "title": "Another One"
+            }
+          }
+        ],
+        "settings": {
+          "text_setting": "section tutorial with collectioss"
+        }
       },
       {
-        "name": "Section Tutorial mixed",
-        "settings": {}
+        "name": "Section Tutorial Mixed",
+        "blocks": [
+          {
+            "type": "section_collection",
+            "settings": {
+             "collection": "hydrogen-1"
+            }
+          },
+          {
+            "type": "section_product",
+            "settings": {
+              "product": "the-collection-snowboard-hydrogen"
+            }
+          }
+        ],
+        "settings": {
+          "text_setting": "section tutorial with Mixed collection and products"
+        }
       }
     ]
   }
