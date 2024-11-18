@@ -1,5 +1,10 @@
+{% comment %} <p>{{ section.index }}</p>
+<p>{{ section.id }}</p> {% endcomment %}
+
+<h2>{{ section.settings.text_setting }}</h2>
+
 {% assign products = section.blocks |  where: "type", "section_product" %}
-{% assign collections = section.blocks |  where: "type", "section_Collection" %}
+{% assign collections = section.blocks |  where: "type", "section_collection" %}
 
 <h2>Product</h2>
 {% for product in products %}
@@ -39,7 +44,6 @@
     "name": "Sections Tutorial",
     "tag": "section",
     "class": "section-tutorial",
-    "limit": 2,
     "settings": [
       {
         "type": "text",
@@ -264,7 +268,7 @@
         "limit": 5
       },
       {
-        "type": "section_Collection",
+        "type": "section_collection",
         "name": "Collection",
         "settings": [
           {
@@ -290,8 +294,66 @@
     ],
     "presets": [
       {
-        "name": "Section Tutorial",
-        "settings": {}
+        "name": "Section Tutorial with Products",
+        "blocks": [
+          {
+            "type": "section_product",
+            "settings": {
+              "product": "the-collection-snowboard-hydrogen"
+            }
+          },
+          {
+            "type": "section_product",
+            "settings": {
+              "product": "the-collection-snowboard-hydrogen",
+              "title": "Another One"
+            }
+          }
+        ],
+        "settings": {
+          "text_setting": "section tutorial with prodycts"
+        }
+      },
+      {
+        "name": "Section Tutorial with Collections",
+       "blocks": [
+          {
+            "type": "section_collection",
+            "settings": {
+             "collection": "hydrogen-1"
+            }
+          },
+          {
+            "type": "section_collection",
+            "settings": {
+              "collection": "hydrogen-1",
+              "title": "Another One"
+            }
+          }
+        ],
+        "settings": {
+          "text_setting": "section tutorial with collectioss"
+        }
+      },
+      {
+        "name": "Section Tutorial Mixed",
+        "blocks": [
+          {
+            "type": "section_collection",
+            "settings": {
+             "collection": "hydrogen-1"
+            }
+          },
+          {
+            "type": "section_product",
+            "settings": {
+              "product": "the-collection-snowboard-hydrogen"
+            }
+          }
+        ],
+        "settings": {
+          "text_setting": "section tutorial with Mixed collection and products"
+        }
       }
     ]
   }
