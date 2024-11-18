@@ -1,19 +1,19 @@
 {% for block in section.blocks %}
   {% if block.type == "section_Collection" %}
-    {% assign title = block.settings.title | default:  block.settings.collection.title %}
-    {% assign image = block.settings.image |  default: blcok.settings.collection.featured_image%}
+    {% assign title = block.settings.title | default: block.settings.collection.title %}
+    {% assign image = block.settings.image | default: block.settings.collection.featured_image %}
   {% elsif block.type == "section_product" %}
     {% assign title = block.settings.title | default: block.settings.product.title %}
-    {% assign image = block.settings.image |  default: blcok.settings.product.featured_image%}
-  
+    {% assign image = block.settings.image | default: block.settings.product.featured_image %}
   {% endif %}
 
   <p>{{ title }}</p>
 
   <div>
-    {{ image |  image_url: width: 200 |  image_tag  }}
+    {{ image | image_url: width: 200 | image_tag }}
   </div>
 {% endfor %}
+
 
 {% schema %}
   {
