@@ -164,6 +164,26 @@
     },
     "sections_tutorial_eC6pCP": {
       "type": "sections-tutorial",
+      "blocks": {
+        "section_product_a9nraK": {
+          "type": "section_product",
+          "settings": {
+            "product": "gift-card",
+            "title": "Better Gift Card"
+          }
+        },
+        "section_collection_zkPLgU": {
+          "type": "section_Collection",
+          "settings": {
+            "collection": "hydrogen",
+            "title": "Special Offer: Hydrogen"
+          }
+        }
+      },
+      "block_order": [
+        "section_product_a9nraK",
+        "section_collection_zkPLgU"
+      ],
       "settings": {
         "text_setting": "This is my first setting",
         "textarea_setting": "This is the first line\nthis is a new line",
@@ -202,7 +222,7 @@
         "article_setting": "",
         "blog_setting": "news",
         "link_setting": "footer",
-        "title_alignment": "left",
+        "title_alignment": "center",
         "font_settings": "abril_fatface_n4"
       }
     }
