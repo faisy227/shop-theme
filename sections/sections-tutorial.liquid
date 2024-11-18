@@ -1,13 +1,12 @@
-{% for block in section.blocks %}
-  {% if block.type == "section_Collection" %}
-    {% assign title = block.settings.title | default: block.settings.collection.title %}
-    {% assign image = block.settings.image | default: block.settings.collection.featured_image %}
-  {% elsif block.type == "section_product" %}
-    {% assign title = block.settings.title | default: block.settings.product.title %}
-    {% assign image = block.settings.image | default: block.settings.product.featured_image %}
-  {% endif %}
+{% assign products = section.blocks |  where: "type", "section_product" %}
+{% assign collections = section.blocks |  where: "type", "section_Collection" %}
 
- <div {{ block.shopify_attributes }}>
+<h2>Product</h2>
+{% for product in products %}
+  {% assign title = block.settings.title | default: block.settings.product.title %}
+  {% assign image = block.settings.image | default: block.settings.product.featured_image %}
+
+  <div {{ block.shopify_attributes }}>
     <p {{ block.shopify_attributes }}>{{ title }}</p>
   {% if image %}
     <div>
@@ -15,8 +14,24 @@
   </div>
   {% endif %}
  </div>
-  
 {% endfor %}
+
+<h1>Some Other COntent</h1>
+<br>
+  <h2>Collections</h2>
+  {% for collection in collections %}
+    {% assign title = block.settings.title | default: block.settings.collection.title %}
+    {% assign image = block.settings.image | default: block.settings.collection.featured_image %}
+  
+    <div {{ block.shopify_attributes }}>
+      <p {{ block.shopify_attributes }}>{{ title }}</p>
+    {% if image %}
+      <div>
+      {{ image | image_url: width: 200 | image_tag }}
+    </div>
+    {% endif %}
+   </div>
+  {% endfor %}
 
 
 {% schema %}
