@@ -14,11 +14,17 @@
       "blocks": {
         "heading": {
           "type": "heading",
-          "settings": { "heading": "My Image Banner", "heading_size": "h0" }
+          "settings": {
+            "heading": "My Image Banner",
+            "heading_size": "h0"
+          }
         },
         "text_qjdg9a": {
           "type": "text",
-          "settings": { "text": "This is a text block", "text_style": "body" }
+          "settings": {
+            "text": "This is a text block",
+            "text_style": "body"
+          }
         },
         "button": {
           "type": "buttons",
@@ -32,7 +38,11 @@
           }
         }
       },
-      "block_order": ["heading", "text_qjdg9a", "button"],
+      "block_order": [
+        "heading",
+        "text_qjdg9a",
+        "button"
+      ],
       "settings": {
         "image": "shopify://shop_images/theme_cover_image.jpg",
         "image_overlay_opacity": 40,
@@ -103,7 +113,11 @@
           }
         }
       },
-      "block_order": ["heading_zhtQBW", "text_BwDALL", "button_6aUNef"],
+      "block_order": [
+        "heading_zhtQBW",
+        "text_BwDALL",
+        "button_6aUNef"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -143,7 +157,10 @@
         "promotion_LdRrX6",
         "promotion_A6cLDD"
       ],
-      "settings": { "title": "Promotion One!!!", "title_alignment": "center" }
+      "settings": {
+        "title": "Promotion One!!!",
+        "title_alignment": "center"
+      }
     },
     "sections_tutorial_eC6pCP": {
       "type": "sections-tutorial",
@@ -165,7 +182,10 @@
           }
         }
       },
-      "block_order": ["section_product_a9nraK", "section_collection_zkPLgU"],
+      "block_order": [
+        "section_product_a9nraK",
+        "section_collection_zkPLgU"
+      ],
       "settings": {
         "text_setting": "This is my first setting",
         "textarea_setting": "This is the first line\nthis is a new line",
@@ -207,6 +227,150 @@
         "title_alignment": "center",
         "font_settings": "abril_fatface_n4"
       }
+    },
+    "sections_tutorial_qLfnzF": {
+      "type": "sections-tutorial",
+      "blocks": {
+        "section_product_EX7MhU": {
+          "type": "section_product",
+          "settings": {
+            "product": "the-collection-snowboard-hydrogen",
+            "title": ""
+          }
+        },
+        "section_product_ewWncK": {
+          "type": "section_product",
+          "settings": {
+            "product": "the-collection-snowboard-hydrogen",
+            "title": "Another One"
+          }
+        }
+      },
+      "block_order": [
+        "section_product_EX7MhU",
+        "section_product_ewWncK"
+      ],
+      "settings": {
+        "text_setting": "section tutorial with prodycts",
+        "textarea_setting": "",
+        "richtext_setting": "",
+        "inline_richtext_setting": "",
+        "range_setting": 60,
+        "select_setting": "value-1",
+        "checkbox_setting": true,
+        "radio_setting": "value-1",
+        "color_setting": "",
+        "bgcolor_setting": "",
+        "URL_setting": "",
+        "html_setting": "",
+        "liquid_setting": "",
+        "product_setting": "",
+        "product_list_setting": [],
+        "collection_setting": "",
+        "collection_list_setting": [],
+        "page_setting": "",
+        "article_setting": "",
+        "blog_setting": "",
+        "link_setting": "",
+        "title_alignment": "left",
+        "font_settings": "assistant_n4"
+      }
+    },
+    "sections_tutorial_UzQyQE": {
+      "type": "sections-tutorial",
+      "blocks": {
+        "section_collection_hKEj7n": {
+          "type": "section_collection",
+          "settings": {
+            "collection": "hydrogen-1",
+            "title": ""
+          }
+        },
+        "section_collection_UHTGLE": {
+          "type": "section_collection",
+          "settings": {
+            "collection": "hydrogen-1",
+            "title": "Another One"
+          }
+        }
+      },
+      "block_order": [
+        "section_collection_hKEj7n",
+        "section_collection_UHTGLE"
+      ],
+      "settings": {
+        "text_setting": "section tutorial with collectioss",
+        "textarea_setting": "",
+        "richtext_setting": "",
+        "inline_richtext_setting": "",
+        "range_setting": 60,
+        "select_setting": "value-1",
+        "checkbox_setting": true,
+        "radio_setting": "value-1",
+        "color_setting": "",
+        "bgcolor_setting": "",
+        "URL_setting": "",
+        "html_setting": "",
+        "liquid_setting": "",
+        "product_setting": "",
+        "product_list_setting": [],
+        "collection_setting": "",
+        "collection_list_setting": [],
+        "page_setting": "",
+        "article_setting": "",
+        "blog_setting": "",
+        "link_setting": "",
+        "title_alignment": "left",
+        "font_settings": "assistant_n4"
+      }
+    },
+    "sections_tutorial_qLjbDY": {
+      "type": "sections-tutorial",
+      "blocks": {
+        "section_collection_zbxBxd": {
+          "type": "section_collection",
+          "settings": {
+            "collection": "hydrogen-1",
+            "title": ""
+          }
+        },
+        "section_product_y39JQK": {
+          "type": "section_product",
+          "settings": {
+            "product": "the-collection-snowboard-hydrogen",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "section_collection_zbxBxd",
+        "section_product_y39JQK"
+      ],
+      "settings": {
+        "text_setting": "section tutorial with Mixed collection and products",
+        "textarea_setting": "",
+        "richtext_setting": "",
+        "inline_richtext_setting": "",
+        "range_setting": 60,
+        "select_setting": "value-1",
+        "checkbox_setting": true,
+        "radio_setting": "value-1",
+        "color_setting": "",
+        "bgcolor_setting": "",
+        "URL_setting": "",
+        "html_setting": "",
+        "liquid_setting": "",
+        "product_setting": "",
+        "product_list_setting": [],
+        "collection_setting": "",
+        "collection_list_setting": [],
+        "page_setting": "",
+        "article_setting": "",
+        "blog_setting": "",
+        "link_setting": "",
+        "title_alignment": "left",
+        "font_settings": "assistant_n4"
+      }
     }
   },
   "order": [
@@ -214,6 +378,9 @@
     "featured_collection",
     "rich_text_qmRRDt",
     "promotion_groups_BrVmYa",
-    "sections_tutorial_eC6pCP"
+    "sections_tutorial_eC6pCP",
+    "sections_tutorial_qLfnzF",
+    "sections_tutorial_UzQyQE",
+    "sections_tutorial_qLjbDY"
   ]
 }
