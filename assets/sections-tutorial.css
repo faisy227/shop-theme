@@ -1,5 +1,13 @@
 /* sections-tutorial.css */
 .section-tutorial{
-    background: black;
+    background: rgba(0, 0, 0, 0.363);
     color: white;
+}
+
+.section-tutorial__internal h2{
+    color: var(--primary-color);
+}
+
+.section-tutorial__internal button{
+    background: var(--primary-color);
 }

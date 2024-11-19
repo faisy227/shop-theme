@@ -1,13 +1,10 @@
 {{ 'sections-tutorial.css' |  asset_url |  stylesheet_tag}}
 
-<style>
-  #shopify-section-{{ section.id }}{
-    background: {{ section.settings.bgcolor_setting }};
-  }
+x
+<div class="section-tutorial__internal" style="--primary-color: {{ section.settings.bgcolor_setting }}">
 
-</style>
-<h1>{{ section.settings.bgcolor_setting }}</h1>
-<h2>{{ section.settings.text_setting }}</h2>
+<button class="button">Button</button>
+  <h2>{{ section.settings.text_setting }}</h2>
 
 {% assign products = section.blocks |  where: "type", "section_product" %}
 {% assign collections = section.blocks |  where: "type", "section_collection" %}
@@ -44,6 +41,7 @@
    </div>
   {% endfor %}
 
+</div>
 
 {% schema %}
   {
