@@ -1,6 +1,9 @@
 {{ 'sections-tutorial.css' |  asset_url |  stylesheet_tag}}
 
-<h2>{{ section.settings.text_setting }}</h2>
+<div class="section-tutorial__internal" data-attribute-name="{{ section.settings.bgcolor_setting }}">
+
+<button class="button">Button</button>
+  <h2>{{ section.settings.text_setting }}</h2>
 
 {% assign products = section.blocks |  where: "type", "section_product" %}
 {% assign collections = section.blocks |  where: "type", "section_collection" %}
@@ -37,6 +40,7 @@
    </div>
   {% endfor %}
 
+</div>
 
 {% schema %}
   {
