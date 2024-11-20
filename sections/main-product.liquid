@@ -1,42 +1,3 @@
-{% if product.metafields.custom.example_metafield %}
-  <h2>Example MetaField</h2>
-<p>{{ product.metafields.custom.example_metafield }}</p>
-{% endif %}
-
-<h2>Product MetaField</h2>
-{% comment %} gives out product.id {% endcomment %}
-<p>{{ product.metafields.custom.related_product }}</p>
-{% comment %} gives out title {% endcomment %}
- {% comment %} this is the product object, the .methods works on it {% endcomment %}
-<p>{{ product.metafields.custom.related_product.value.title }}</p>
-
-<h2>File MetaField</h2>
-<p>Link: {{ product.metafields.custom.product_guide.value.url }}</p>
-<a href="{{ product.metafields.custom.product_guide.value.url }}">file</a>
-
-<h2>Image File MetaField</h2>
-{{ product.metafields.custom.image_metafield | image_url: width: 300 | image_tag }}
-
-<h2>Date Metafield</h2>
-<p>{{ product.metafields.custom.date.value |  date }}</p>
-
-<h2>Measurement - Weight Metafield</h2>
-<p>Weight: {{ product.metafields.custom.weigh.value }} Unit: {{ product.metafields.custom.weigh.value.unit }}</p>
-
-<h2>Rich Text Metafield</h2>
-{{ product.metafields.custom.richtext_metafield |  metafield_tag}}
-
-<h2>JSON Metafield</h2>
-{% comment %} access values from  {% endcomment %}
-<p style="opacity: {{ product.metafields.custom.json_metafield.value.message_opacity }}">{{ product.metafields.custom.json_metafield.value.message }}</p>
-{% comment %} Just the json fomatt {% endcomment %}
-<p>{{ product.metafields.custom.json_metafield }}</p>
-
-<h2>List Metafield</h2>
-{% for item in product.metafields.custom.list_metafield.value %}
-    <p>{{ item }}</p>
-{% endfor %}
-
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -760,7 +721,10 @@
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
+    {% comment %} from snippets {% endcomment %}
+    {% render 'product-craftsperson',{ product: product} %}
   </div>
+
 </product-info>
 
 {% schema %}
