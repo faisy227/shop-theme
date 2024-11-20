@@ -8,6 +8,57 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "sections_tutorial_EFXpYk": {
+      "type": "sections-tutorial",
+      "blocks": {
+        "section_collection_MxQt9f": {
+          "type": "section_collection",
+          "settings": {
+            "collection": "hydrogen-1",
+            "title": ""
+          }
+        },
+        "section_product_AmgqK4": {
+          "type": "section_product",
+          "settings": {
+            "product": "the-collection-snowboard-hydrogen",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "section_collection_MxQt9f",
+        "section_product_AmgqK4"
+      ],
+      "settings": {
+        "text_setting": "section tutorial with Mixed collection and products",
+        "textarea_setting": "",
+        "richtext_setting": "",
+        "inline_richtext_setting": "",
+        "range_setting": 60,
+        "select_setting": "value-1",
+        "checkbox_setting": true,
+        "radio_setting": "value-1",
+        "color_setting": "",
+        "bgcolor_setting": "",
+        "URL_setting": "",
+        "html_setting": "",
+        "liquid_setting": "",
+        "product_setting": "",
+        "product_list_setting": [],
+        "collection_setting": "",
+        "collection_list_setting": [],
+        "page_setting": "",
+        "article_setting": "",
+        "blog_setting": "",
+        "link_setting": "",
+        "title_alignment": "left",
+        "font_settings": "assistant_n4"
+      }
+    }
+  },
+  "order": [
+    "sections_tutorial_EFXpYk"
+  ]
 }
