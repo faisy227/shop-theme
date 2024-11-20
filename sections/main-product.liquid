@@ -1,5 +1,9 @@
-<h2>Example MetaField</h2>
+{% if product.metafields.custom.example_metafield %}
+  <h2>Example MetaField</h2>
 <p>{{ product.metafields.custom.example_metafield }}</p>
+{% endif %}
+
+
 
 <product-info
   id="MainProduct-{{ section.id }}"
