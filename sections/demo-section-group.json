@@ -8,12 +8,8 @@
  * ------------------------------------------------------------
  */
 {
-    "type": "header",
-    "name": "Demo Section Group",
-    "sections": {
-
-    },
-    "order": [
-        
-    ]
+  "type": "header",
+  "name": "Demo Section Group",
+  "sections": {},
+  "order": []
 }

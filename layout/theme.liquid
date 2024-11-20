@@ -301,7 +301,6 @@
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     {% comment %} render tag {% endcomment %}
  {% comment %} takes a file from a .liquid and display it {% endcomment %}
-    {% render 'tutorial' title "My Title" %}
     {% comment %} can access the with "" in rendered page{% endcomment %}
     {% render 'my-snippet', {
       word: 'hello',

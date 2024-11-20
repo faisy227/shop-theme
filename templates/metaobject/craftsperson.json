@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_4xY3bd": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_kyQdWY": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_GiNGkq": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_xRegq7": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kyQdWY",
+        "text_GiNGkq",
+        "buttons_xRegq7"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "sections_tutorial_EFXpYk": {
+      "type": "sections-tutorial",
+      "blocks": {
+        "section_collection_MxQt9f": {
+          "type": "section_collection",
+          "settings": {
+            "collection": "hydrogen-1",
+            "title": ""
+          }
+        },
+        "section_product_AmgqK4": {
+          "type": "section_product",
+          "settings": {
+            "product": "the-collection-snowboard-hydrogen",
+            "title": ""
+          }
+        }
+      },
+      "block_order": [
+        "section_collection_MxQt9f",
+        "section_product_AmgqK4"
+      ],
+      "settings": {
+        "text_setting": "section tutorial with Mixed collection and products",
+        "textarea_setting": "",
+        "richtext_setting": "",
+        "inline_richtext_setting": "",
+        "range_setting": 60,
+        "select_setting": "value-1",
+        "checkbox_setting": true,
+        "radio_setting": "value-1",
+        "color_setting": "",
+        "bgcolor_setting": "",
+        "videoURL_setting": "",
+        "URL_setting": "",
+        "html_setting": "",
+        "liquid_setting": "",
+        "product_setting": "",
+        "product_list_setting": [],
+        "collection_setting": "",
+        "collection_list_setting": [],
+        "page_setting": "",
+        "article_setting": "",
+        "blog_setting": "",
+        "link_setting": "",
+        "title_alignment": "left",
+        "font_settings": "assistant_n4"
+      }
+    },
+    "metaobject_section_bfH4jG": {
+      "type": "metaobject-section",
+      "settings": {
+        "section_message": "This is a message, from the metaobject!!"
+      }
+    }
+  },
+  "order": [
+    "image_banner_4xY3bd",
+    "sections_tutorial_EFXpYk",
+    "metaobject_section_bfH4jG"
+  ]
+}

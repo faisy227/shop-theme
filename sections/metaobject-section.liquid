@@ -1,0 +1,30 @@
+<h1>{{ metaobject.name }}</h1>
+<p>{{ section.settings.section_message }}</p>
+
+<p>{{ metaobject.system.handle }}</p>
+<h2>Meet the craftsperson: {{ shop.metaobjects.crafsperson.handle }}</h2>
+
+
+{% comment %} {% for product in collection.all.products %}
+    {% if product.metafields.custom.crafsperson.value.system.handle == metaobject.system.handle %}
+        <p>{{ product.title }}</p>
+    {% endif %}
+{% endfor %} {% endcomment %}
+
+{% schema %}
+{
+    "name": "Metaobjects Section",
+    "settings": [
+        {
+            "type": "text",
+            "label": "Section Message",
+            "id": "section_message"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Metaobjects Section"
+        }
+    ]
+}
+{% endschema %}

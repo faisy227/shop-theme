@@ -1,0 +1,20 @@
+{% comment %} 
+ Renders a craftperson section
+
+ Accepts: 
+ - product: {Object} the product object with the crafsperson metafield
+
+ Usage:
+{% render 'product-craftsperson',{ product: product} %}
+
+{% endcomment %}
+
+<div class="page-width">
+    <h2>Meet the craftsperson: {{ product.metafields.custom.crafsperson.value.name }}</h2>
+    {% if product.metafields.custom.crafsperson.value.image %}
+        {{ product.metafields.custom.crafsperson.value.image |  image_url: width: 250 |  image_tag  }}
+    {% endif %}
+    <div>
+    {{ product.metafields.custom.crafsperson.value.bio |  metafield_tag }}
+    </div>
+</div>
