@@ -19,20 +19,15 @@
             "text_style": "uppercase"
           }
         },
-        "text_zFk7NH": {
-          "type": "text",
-          "settings": {
-            "text": "This is the metafield value:{{ product.metafields.custom.example_metafield.value }}",
-            "text_style": "body"
-          }
-        },
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+          }
         },
         "price": {
           "type": "price",
-          "settings": {}
+          "settings": {
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -43,7 +38,8 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {}
+          "settings": {
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -54,7 +50,8 @@
         },
         "description": {
           "type": "description",
-          "settings": {}
+          "settings": {
+          }
         },
         "share": {
           "type": "share",
@@ -65,7 +62,6 @@
       },
       "block_order": [
         "vendor",
-        "text_zFk7NH",
         "title",
         "price",
         "variant_picker",
