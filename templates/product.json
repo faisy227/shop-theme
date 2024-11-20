@@ -21,13 +21,18 @@
         },
         "title": {
           "type": "title",
+          "settings": {}
+        },
+        "text_EDjcnm": {
+          "type": "text",
           "settings": {
+            "text": "MetafIeld Example: {{ product.metafields.custom.example_metafield.value }}",
+            "text_style": "body"
           }
         },
         "price": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -38,8 +43,7 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -50,8 +54,7 @@
         },
         "description": {
           "type": "description",
-          "settings": {
-          }
+          "settings": {}
         },
         "share": {
           "type": "share",
@@ -63,6 +66,7 @@
       "block_order": [
         "vendor",
         "title",
+        "text_EDjcnm",
         "price",
         "variant_picker",
         "quantity_selector",
