@@ -303,10 +303,7 @@
     {% comment %} render tag {% endcomment %}
  {% comment %} takes a file from a .liquid and display it {% endcomment %}
     {% comment %} can access the with "" in rendered page{% endcomment %}
-    {% render 'my-snippet', {
-      word: 'hello',
-      second_word: "another one"
-    } %}
+    {% render 'my-snippet', word: 'hello', second_word: "another one" %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -692,10 +689,7 @@
     {% comment %} render tag {% endcomment %}
  {% comment %} takes a file from a .liquid and display it {% endcomment %}
     {% comment %} can access the with "" in rendered page{% endcomment %}
-    {% render 'my-snippet', {
-      word: 'hello',
-      second_word: "another one"
-    } %}
+    {% render 'my-snippet', word: 'hello', second_word: "another one" %}
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -777,3 +771,24 @@
   </body>
 </html>
 >>>>>>> a6360d5536fe67ac4989aef4078fa79b22ea656f
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'my-snippet', {
+          word: 'hello',
+          second_word: "another one"
+        } %}
+  to: '{% render ''my-snippet'', word: ''hello'', second_word: "another one" %}'
+  position: 18511..18579
+- from: |-
+    {% render 'my-snippet', {
+          word: 'hello',
+          second_word: "another one"
+        } %}
+  to: '{% render ''my-snippet'', word: ''hello'', second_word: "another one" %}'
+  position: 40676..40744
+{% endcomment %}
